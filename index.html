@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+<title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --light:#F0F2F7;
+      --background:#F2F2F2;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+    body{
+      background: var(--background);
+
+    }
+    p,button{
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 15px;
+      line-height: 1.4rem;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: 'Big Shoulders Display', cursive;
+      margin: 30px 0;
+    }
+    .cards{
+      display: grid;
+      border-radius: 6px;
+      margin: 20px 10px;
+      overflow: hidden;
+    }
+    .card{
+      padding: 40px 30px;
+      color: var(--light);
+    }
+    .card--1{
+      background: #E28526;
+    }
+    .card--1>.card__btn{
+      color: #E28526;
+    }
+    .card--2{
+      background: #016971;
+    }
+    .card--2>.card__btn{
+      color: #016971;
+    }
+    .card--3{
+      background: #00403F;
+    }
+    .card--3>.card__btn{
+      color: #00403F;
+    }
+    .card__btn{
+      background: var(--light);
+      padding: 10px 20px;
+      border-radius: 40px;
+      margin-top: 30px;
+      border: none;
+    }
+    @media screen and (min-width:768px){
+      .cards{
+        grid-template-columns: repeat(3,1fr);
+        margin: 0;
+        max-width: 900px;
+        margin: 30px auto;
+      }
+      .attribution{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cards">
+    <div class="card card--1">
+      <img class="card__img" src="images/icon-sedans.svg" alt="">
+      <h1 class="card__title">Sedans</h1>
+      <p class="card__txt">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.</p>
+      <button class="card__btn">Learn More</button>
+    </div>
+    <div class="card card--2">
+      <img class="card__img" src="images/icon-suvs.svg" alt="">
+      <h1 class="card__title">SUVs</h1>
+      <p class="card__txt">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures.</p>
+      <button class="card__btn">Learn More</button>
+    </div>
+    <div class="card card--3">
+      <img class="card__img" src="images/icon-luxury.svg" alt="">
+      <h1 class="card__title">Luxury</h1>
+      <p class="card__txt">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.</p>
+      <button class="card__btn">Learn More</button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Byron Delgado</a>.
+  </div>
+</body>
+</html>
